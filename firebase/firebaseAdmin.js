@@ -1,6 +1,6 @@
 import admin from "firebase-admin";
 
-const serviceAccount = require("../secret.json")
+const serviceAccount = require("../service-account.json")
 
 export const verifyIdToken = (token) => {
     if (!admin.apps.length) {
@@ -10,6 +10,7 @@ export const verifyIdToken = (token) => {
         })
     }
 
+    admin.auth().verifyIdToken
     return admin
         .auth()
         .verifyIdToken(token)

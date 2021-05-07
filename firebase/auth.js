@@ -5,7 +5,7 @@ import firebaseClient from "./firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-const AuthContext = createContext({});
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     firebaseClient();
